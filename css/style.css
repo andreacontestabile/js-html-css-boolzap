@@ -242,8 +242,39 @@ i {
 
 #main-screen .main-view {
   height: calc(100% - 140px);
+  padding: 50px 80px;
   background-image: url('../img/mine.jpg');
 }
+
+#main-screen .msg-row {
+  display: flex;
+  margin: 10px 0;
+}
+
+#main-screen .main-view .msg {
+  position: relative;
+  padding: 15px 35px 15px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+#main-screen .main-view .user-msg {
+  margin-left: auto;
+  background-color: #D5F9BA;
+}
+
+#main-screen .main-view .ai-msg {
+  background-color: #FFF;
+}
+
+#main-screen .main-view .msg-time {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #A8A8A8;
+}
+
 
 #main-screen .footer-right {
   display: flex;
