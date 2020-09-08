@@ -126,7 +126,7 @@ a {
 
 #left-screen .notifications .notification-status .status-heading {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 #left-screen .notifications .notification-status .status-action {
@@ -140,6 +140,7 @@ a {
   align-items: center;
   height: 46px;
   padding: 6px;
+  background-color: #FAFAFA;
 }
 
 #left-screen .search-bar .search-icon {
@@ -150,6 +151,7 @@ a {
   height: 100%;
   background-color: #fff;
   color: #B7BABC;
+  border: 1px solid #EAEAEA;
 }
 
 #left-screen .search-bar #search-field {
@@ -157,11 +159,63 @@ a {
   width: 100%;
   padding: 0 6px;
   border: none;
-  border-left: 1px solid #EAEAEA;
+  border: 1px solid #EAEAEA;
+  border-left: none;
 }
 
 #left-screen .search-bar #search-field::placeholder {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #666;
+}
+
+#left-screen .conversations-list {
+  height: calc(100% - 196px);
+  background-color: #fff;
+  overflow: auto;
+}
+
+#left-screen .conversations-list .conversation-item {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 6px 20px;
+  border-bottom: 1px solid #FAFAFA;
+}
+
+#left-screen .conversations-list .conversation-item.selected {
+  background-color: #E9EBEB;
+}
+
+#left-screen .conversation-item .contact-img,
+#left-screen .conversation-item .contact-img img {
+  height: 100%;
+}
+
+#left-screen .conversation-item .contact-img {
+  margin-right: 15px;
+  padding: 3px 0;
+}
+
+#left-screen .conversation-item .contact-img img {
+  border-radius: 50%;
+}
+
+#left-screen .conversation-item .contact-name {
+  margin-bottom: 5px;
+}
+
+#left-screen .conversation-item .contact-name h3 {
+  font-size: 17px;
+}
+
+#left-screen .conversation-item .conversation-text p,
+#left-screen .conversation-item .conversation-time {
+  font-size: 14px;
+  color: #C8CBCC;
+}
+
+#left-screen .conversation-item .conversation-time {
+  margin-left: auto;
+  font-size: 12px;
 }
