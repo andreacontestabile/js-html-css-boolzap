@@ -4,11 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Boolzapp</title>
 </head>
 <body>
+  <div class="container">
+    <div class="app-container">
+      <div id="left-screen">
+        <section class="header-left bg-lightgrey">
+          <img id="my-avatar" src="img/avatar_io.jpg" alt="My Avatar">
+          <div class="header-left-actions">
+            <ul class="actions-list">
+              <li class="actions-list-item">
+                <a href="#"><i class="fas fa-circle-notch"></i></a>
+              </li>
+              <li class="actions-list-item">
+                <a href="#"><i class="fas fa-comment-alt"></i></a>
+              </li>
+              <li class="actions-list-item">
+                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="notifications bg-lightblue">
+          <div class="off-icon">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+          <div class="notification-status">
+            <h2 class="status-heading">Ricevi notifiche di nuovi messaggi</h2>
+            <a class="status-action" href="#">Attiva notifiche desktop</a>
+          </div>
+        </section>
+        <section class="search-bar bg-lightgrey">
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input id="search-field" type="text" placeholder="Cerca o inizia una nuova chat">
+        </section>
+      </div>
+      <div id="main-screen"></div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/script.js" charset="utf-8"></script>
 </body>

@@ -3,3 +3,165 @@
   margin: 0;
   padding: 0;
 }
+
+/* Colori */
+/* Verde sfondo: #009688
+   Grigio sfondo: #D9DBD4 */
+
+body {
+  height: 100vh;
+  padding: 40px 0;
+  background: linear-gradient(180deg, #009688 15%, #D9DBD4 15%);
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 80%;
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+  background-color: grey;
+}
+
+/* Common Classes */
+
+.bg-lightgrey {
+  background-color: #EAEAEA;
+}
+
+.bg-lightblue {
+  background-color: #8EDAFC;
+}
+
+.app-container,
+#left-screen,
+#main-screen {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+}
+
+#main-screen {
+  width: 65%;
+  background-color: blue;
+}
+
+#left-screen {
+  width: 35%;
+  background-color: red;
+}
+
+#left-screen .header-left {
+  height: 70px;
+  padding: 10px;
+}
+
+#left-screen .header-left img#my-avatar {
+  height: 100%;
+  width: auto;
+  border-radius: 50%;
+}
+
+#left-screen .header-left {
+  display: flex;
+}
+
+#left-screen .header-left .header-left-actions {
+  display:flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#left-screen .header-left .actions-list {
+  display: flex;
+}
+
+#left-screen .header-left .actions-list .actions-list-item {
+  padding: 10px;
+}
+
+#left-screen .header-left .actions-list a {
+  font-size: 23px;
+  color: #B1B1B1;
+}
+
+#left-screen .notifications {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+}
+
+#left-screen .notifications .off-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  background-color: #F2FBFF;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #8EDAFC;
+}
+
+#left-screen .notifications .notification-status .status-heading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#left-screen .notifications .notification-status .status-action {
+  font-size: 14px;
+  color: #598599;
+  text-decoration: underline;
+}
+
+#left-screen .search-bar {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  padding: 6px;
+}
+
+#left-screen .search-bar .search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  color: #B7BABC;
+}
+
+#left-screen .search-bar #search-field {
+  height: 100%;
+  width: 100%;
+  padding: 0 6px;
+  border: none;
+  border-left: 1px solid #EAEAEA;
+}
+
+#left-screen .search-bar #search-field::placeholder {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
