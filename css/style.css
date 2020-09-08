@@ -4,10 +4,7 @@
   padding: 0;
 }
 
-/* Colori */
-/* Verde sfondo: #009688
-   Grigio sfondo: #D9DBD4 */
-
+/* GENERAL */
 body {
   height: 100vh;
   padding: 40px 0;
@@ -44,40 +41,8 @@ i {
   background-color: grey;
 }
 
+
 /* Common Classes */
-
-.bg-lightgrey {
-  background-color: #EAEAEA;
-}
-
-.bg-lightblue {
-  background-color: #8EDAFC;
-}
-
-.app-container,
-#left-screen,
-#main-screen {
-  height: 100%;
-}
-
-.app-container {
-  display: flex;
-}
-
-#main-screen {
-  width: 65%;
-}
-
-#left-screen {
-  width: 35%;
-}
-
-#left-screen .header-left {
-  display: flex;
-  height: 70px;
-  padding: 10px;
-}
-
 .avatar {
   height: 100%;
   border-radius: 50%;
@@ -102,6 +67,43 @@ i {
   color: #B1B1B1;
 }
 
+.bg-lightgrey {
+  background-color: #EAEAEA;
+}
+
+.bg-lightblue {
+  background-color: #8EDAFC;
+}
+
+/* LAYOUT */
+
+.app-container,
+#left-screen,
+#main-screen {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+}
+
+#main-screen {
+  width: 65%;
+}
+
+#left-screen {
+  width: 35%;
+}
+
+/* Header Left */
+
+#left-screen .header-left {
+  display: flex;
+  height: 70px;
+  padding: 10px;
+}
+
+/* Notifications */
 #left-screen .notifications {
   display: flex;
   align-items: center;
@@ -133,6 +135,7 @@ i {
   text-decoration: underline;
 }
 
+/* Search bar */
 #left-screen .search-bar {
   display: flex;
   align-items: center;
@@ -167,6 +170,7 @@ i {
   color: #666;
 }
 
+/* Conversations */
 #left-screen .conversations-list {
   height: calc(100% - 196px);
   background-color: #fff;
@@ -218,6 +222,7 @@ i {
   font-size: 12px;
 }
 
+/* Header Right */
 #main-screen .header-right {
   display: flex;
   align-items: center;
@@ -240,11 +245,16 @@ i {
   color: #888;
 }
 
+/* Main view */
+
 #main-screen .main-view {
   height: calc(100% - 140px);
   padding: 50px 80px;
   background-image: url('../img/mine.jpg');
+  overflow-y: auto;
 }
+
+/* Messages */
 
 #main-screen .msg-row {
   display: flex;
@@ -253,9 +263,12 @@ i {
 
 #main-screen .main-view .msg {
   position: relative;
+  max-width:50%;
   padding: 15px 35px 15px 15px;
   border-radius: 10px;
   font-size: 15px;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 #main-screen .main-view .user-msg {
@@ -275,6 +288,7 @@ i {
   color: #A8A8A8;
 }
 
+/* Footer right */
 
 #main-screen .footer-right {
   display: flex;
@@ -307,4 +321,10 @@ i {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #999;
+}
+
+/* Clone template */
+
+.msg-template {
+  display: none;
 }
