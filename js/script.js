@@ -48,12 +48,30 @@ function sendMessage() {
 }
 
 // Funzione Get Reply
+
+var risposte = [
+  "Ok",
+  "Certo",
+  "Bene",
+  "Ciao!",
+  "Molto bene",
+  "Benissimo",
+  "Sì, tranquillo",
+  "Grande!",
+  "Sicuramente",
+  "Sono d'accordo",
+  "Stai scherzando?",
+  "Ci sentiamo più tardi, ok?"
+];
+
 function getReply() {
   setTimeout(function(){
     var msgElement = $(".msg-template .msg-row").clone();
     var currentTime = getTime();
+    var rand = Math.floor(Math.random() * risposte.length);
+    var risposta = risposte[rand];
 
-    msgElement.find(".msg-text").text("Questa è una risposta");
+    msgElement.find(".msg-text").text(risposta);
     msgElement.find(".msg-time").text(currentTime);
     msgElement.find(".msg").addClass("ai-msg");
 
