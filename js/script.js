@@ -81,8 +81,11 @@ var risposte = [
 ];
 
 function getReply() {
+  var statusElement = $(".conversation-last p").text();
+  $(".conversation-last p").text("Sta scrivendo...");
   setTimeout(function(){
     var msgElement = $(".msg-template .msg-row").clone();
+
     var currentTime = getTime();
     var rand = Math.floor(Math.random() * risposte.length);
     var risposta = risposte[rand];
@@ -92,6 +95,8 @@ function getReply() {
     msgElement.find(".msg").addClass("ai-msg");
 
     $(".main-view").append(msgElement);
+
+    $(".conversation-last p").text(statusElement);
 
     var chat = document.querySelector(".main-view");
     chat.scrollTop = chat.scrollHeight - chat.clientHeight;
