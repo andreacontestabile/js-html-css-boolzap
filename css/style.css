@@ -251,7 +251,7 @@ i {
   height: calc(100% - 140px);
   padding: 50px 80px;
   background-image: url('../img/mine.jpg');
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 /* Messages */

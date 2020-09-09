@@ -1,14 +1,29 @@
 $(document).ready(function() {
-
+// Keypress event (send message)
   $("#msg-input").keypress(function(e) {
     if (e.which == 13) {
       sendMessage();
     }
   });
 
+// Click event (send message)
   $("#send-btn").click(function(){
     sendMessage();
   });
+
+// Input event (contact name search/filter)
+  $("#search-field").on("input",function(){
+    var input = $(this).val().toLowerCase();
+    $(".conversation-item").each(function() {
+      var nome = $(this).find(".contact-name").text().toLowerCase();
+      if (nome.includes(input)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+
 });
 
 // FUNZIONI
@@ -43,6 +58,7 @@ function sendMessage() {
     $("#msg-input").val("");
 
     getReply();
+
   };
 
 }
@@ -76,6 +92,9 @@ function getReply() {
     msgElement.find(".msg").addClass("ai-msg");
 
     $(".main-view").append(msgElement);
+
+    var chat = document.querySelector(".main-view");
+    chat.scrollTop = chat.scrollHeight - chat.clientHeight;
 
   }, 1000);
 }
