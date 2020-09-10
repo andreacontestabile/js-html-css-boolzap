@@ -274,28 +274,6 @@ i {
   border-radius: 10px;
   font-size: 15px;
   word-break: break-word;
-  hyphens: auto;
-}
-
-#main-screen .main-view .msg .msg-menu {
-  display: none;
-  position: absolute;
-  bottom: -70px;
-  right: 0;
-  white-space: nowrap;
-  background-color: #fff;
-  text-align: center;
-}
-
-#main-screen .main-view .msg .msg-menu a {
-  display: block;
-  padding: 10px;
-  font-size: 14px;
-  color: #999;
-}
-
-#main-screen .main-view .msg .msg-menu a:hover {
-  color: #000;
 }
 
 #main-screen .main-view .user-msg {
@@ -318,13 +296,37 @@ i {
 #main-screen .main-view .msg .arrow {
   display: none;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 8px;
+  right: 10px;
 }
 
 #main-screen .main-view .msg:hover .arrow {
   display: block;
   color: #999;
+}
+
+/* Message Menu */
+
+#main-screen .main-view .msg .msg-menu {
+  display: none;
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+#main-screen .main-view .msg .msg-menu a {
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+#main-screen .main-view .msg .msg-menu a:hover {
+  color: #000;
 }
 
 /* Footer right */
