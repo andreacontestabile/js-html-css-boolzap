@@ -183,6 +183,7 @@ i {
   height: 80px;
   padding: 6px 20px;
   border-bottom: 1px solid #FAFAFA;
+  cursor: pointer;
 }
 
 #left-screen .conversations-list .conversation-item.selected {
@@ -248,10 +249,15 @@ i {
 /* Main view */
 
 #main-screen .main-view {
+  display: none;
   height: calc(100% - 140px);
   padding: 50px 80px;
   background-image: url('../img/mine.jpg');
   overflow-y: scroll;
+}
+
+#main-screen .main-view.active {
+  display: block;
 }
 
 /* Messages */

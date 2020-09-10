@@ -24,6 +24,28 @@ $(document).ready(function() {
     });
   });
 
+// Click event on contact items
+
+  $(".conversation-item").click(function() {
+    $(".conversation-item").removeClass("selected");
+    $(this).addClass("selected");
+
+    var contactIndex = $(this).index();
+
+    $(".main-view").each(function() {
+      $(this).removeClass("active");
+    });
+
+    $(".main-view").eq(contactIndex).addClass("active");
+
+    var contactName = $(this).find(".contact-name").text();
+    var contactImg = $(this).find(".contact-img img").attr('src');
+
+    $(".active-conversation-info .contact-name h3").text(contactName);
+    $("#contact-avatar").attr("src", contactImg);
+
+  })
+
 });
 
 // FUNZIONI
@@ -46,6 +68,7 @@ function sendMessage() {
 
   var inputValue = $("#msg-input").val();
   var msgElement = $(".msg-template .msg-row").clone();
+
   if (inputValue !="") {
 
     var currentTime = getTime();
@@ -54,7 +77,7 @@ function sendMessage() {
     msgElement.find(".msg-time").text(currentTime);
     msgElement.find(".msg").addClass("user-msg");
 
-    $(".main-view").append(msgElement);
+    $(".main-view.active").append(msgElement);
     $("#msg-input").val("");
 
     getReply();
@@ -81,8 +104,12 @@ var risposte = [
 ];
 
 function getReply() {
+
   var statusElement = $(".conversation-last p").text();
   $(".conversation-last p").text("Sta scrivendo...");
+
+  var viewIndex = $(".main-view.active").index() - 1;
+
   setTimeout(function(){
     var msgElement = $(".msg-template .msg-row").clone();
 
@@ -94,7 +121,7 @@ function getReply() {
     msgElement.find(".msg-time").text(currentTime);
     msgElement.find(".msg").addClass("ai-msg");
 
-    $(".main-view").append(msgElement);
+    $(".main-view").eq(viewIndex).append(msgElement);
 
     $(".conversation-last p").text(statusElement);
 
