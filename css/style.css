@@ -277,6 +277,27 @@ i {
   hyphens: auto;
 }
 
+#main-screen .main-view .msg .msg-menu {
+  display: none;
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  text-align: center;
+}
+
+#main-screen .main-view .msg .msg-menu a {
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+#main-screen .main-view .msg .msg-menu a:hover {
+  color: #000;
+}
+
 #main-screen .main-view .user-msg {
   margin-left: auto;
   background-color: #D5F9BA;
@@ -292,6 +313,18 @@ i {
   right: 5px;
   font-size: 10px;
   color: #A8A8A8;
+}
+
+#main-screen .main-view .msg .arrow {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#main-screen .main-view .msg:hover .arrow {
+  display: block;
+  color: #999;
 }
 
 /* Footer right */

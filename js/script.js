@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 // Keypress event (send message)
   $("#msg-input").keypress(function(e) {
     if (e.which == 13) {
@@ -25,7 +26,6 @@ $(document).ready(function() {
   });
 
 // Click event on contact items
-
   $(".conversation-item").click(function() {
     $(".conversation-item").removeClass("selected");
     $(this).addClass("selected");
@@ -44,7 +44,25 @@ $(document).ready(function() {
     $(".active-conversation-info .contact-name h3").text(contactName);
     $("#contact-avatar").attr("src", contactImg);
 
-  })
+  });
+
+// Click event on message arrow
+  $(document).on("click", ".arrow a", function(e) {
+    var thisMenu = $(this).parent().siblings(".msg-menu");
+    $(".msg-menu").not(thisMenu).hide();
+    thisMenu.toggle();
+    e.stopPropagation();
+  });
+
+// Click event to close msg-menu (click anywhere)
+  $(document).on("click", "body:not(.arrow a)", function() {
+    $(".msg-menu").hide();
+  });
+
+// Click event to remove message
+  $(document).on("click", "a#msg-del", function() {
+    $(this).parents(".msg-row").remove();
+  });
 
 });
 
@@ -87,7 +105,6 @@ function sendMessage() {
 }
 
 // Funzione Get Reply
-
 var risposte = [
   "Ok",
   "Certo",

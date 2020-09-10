@@ -10,11 +10,16 @@
   <title>Boolzapp</title>
 </head>
 <body>
+  <!-- container -->
   <div class="container">
+    <!-- app container -->
     <div class="app-container">
+      <!-- Left Screen -->
       <div id="left-screen">
+        <!-- Header Left -->
         <section class="header-left bg-lightgrey">
           <img id="my-avatar" class="avatar" src="img/avatar_io.jpg" alt="My Avatar">
+          <!-- Actions Icons -->
           <div class="actions">
             <ul class="actions-list">
               <li class="actions-list-item">
@@ -28,33 +33,49 @@
               </li>
             </ul>
           </div>
+          <!-- /Actions Icons -->
         </section>
+        <!-- /Header Left -->
+        <!-- Notifications -->
         <section class="notifications bg-lightblue">
           <div class="off-icon">
             <i class="fas fa-bell-slash"></i>
           </div>
+          <!-- Notifications status -->
           <div class="notification-status">
             <h2 class="status-heading">Ricevi notifiche di nuovi messaggi</h2>
             <a class="status-action" href="#">Attiva notifiche desktop</a>
           </div>
+          <!-- /Notification status -->
         </section>
+        <!-- /Notifications -->
+        <!-- Search Bar -->
         <section class="search-bar">
           <div class="search-icon">
             <i class="fas fa-search"></i>
           </div>
+          <!-- Search Input -->
           <input id="search-field" type="text" placeholder="Cerca o inizia una nuova chat">
+          <!-- /Search Input -->
         </section>
+        <!-- /Search Bar -->
+        <!-- Conversations List -->
         <section class="conversations-list">
+          <!-- Conversation Item -->
           <div class="conversation-item selected">
             <div class="contact-img">
               <img src="img/avatar_1.jpg" alt="Avatar">
             </div>
+            <!-- Conversation info -->
             <div class="conversation-info">
               <div class="contact-name"><h3>Michele</h3></div>
               <div class="conversation-text"><p>Testo della conversazione</p></div>
             </div>
+            <!-- /Conversation Info -->
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_2.jpg" alt="Avatar">
@@ -65,6 +86,8 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_3.jpg" alt="Avatar">
@@ -75,6 +98,8 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_4.jpg" alt="Avatar">
@@ -85,6 +110,8 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_5.jpg" alt="Avatar">
@@ -95,6 +122,8 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_6.jpg" alt="Avatar">
@@ -105,6 +134,8 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_7.jpg" alt="Avatar">
@@ -115,6 +146,8 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
+          <!-- Conversation Item -->
           <div class="conversation-item">
             <div class="contact-img">
               <img src="img/avatar_8.jpg" alt="Avatar">
@@ -125,15 +158,23 @@
             </div>
             <div class="conversation-time">17:53</div>
           </div>
+          <!-- /Conversation Item -->
         </section>
+        <!-- /Conversations List -->
       </div>
+      <!-- /Left Screen -->
+      <!-- Main Screen -->
       <div id="main-screen">
+        <!-- Header Right -->
         <section class="header-right bg-lightgrey">
           <img id="contact-avatar" class="avatar" src="img/avatar_1.jpg" alt="Contact Avatar">
+          <!-- Active Conversation Info -->
           <div class="active-conversation-info">
             <div class="contact-name"><h3>Michele</h3></div>
             <div class="conversation-last"><p>Ultimo accesso alle 15:40</p></div>
           </div>
+          <!-- /Active Conversation Info -->
+          <!-- Actions Icons -->
           <div class="actions">
             <ul class="actions-list">
               <li class="actions-list-item">
@@ -147,97 +188,206 @@
               </li>
             </ul>
           </div>
+          <!-- /Actions Icons -->
         </section>
+        <!-- /Header Right -->
+        <!-- View -->
         <section class="main-view active">
+          <!-- Message Row -->
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Questo è un messaggio</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <!-- Message Menu -->
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
+              <!-- /Message Menu -->
             </div>
           </div>
+          <!-- /Message Row -->
+          <!-- Message Row -->
           <div class="msg-row">
             <div class="msg ai-msg">
               <p class="msg-text">Questo è un messaggio</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
+          <!-- /Message Row -->
+          <!-- Message Template (hidden) -->
           <div class="msg-template">
             <div class="msg-row">
               <div class="msg">
                 <p class="msg-text"></p>
                 <p class="msg-time"></p>
+                <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+                <!-- Message Menu -->
+                <div class="msg-menu">
+                  <ul class="msg-menu-list">
+                    <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                    <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                  </ul>
+                </div>
+                <!-- /Message Menu -->
               </div>
             </div>
           </div>
+          <!-- /Message Template -->
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Fabio</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Samuele</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Alessandro B.</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Alessandro L.</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Claudia</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Davide</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- View -->
         <section class="main-view">
           <div class="msg-row">
             <div class="msg user-msg">
               <p class="msg-text">Stai parlando con Federico</p>
               <p class="msg-time">17:30</p>
+              <div class="arrow"><a href="#"><i class="fas fa-chevron-down"></i></a></div>
+              <div class="msg-menu">
+                <ul class="msg-menu-list">
+                  <li class="msg-menu-list-item"><a href="#">Info messaggio</a></li>
+                  <li class="msg-menu-list-item"><a id="msg-del" href="#">Cancella messaggio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <!-- /View -->
+        <!-- Footer Right -->
         <section class="footer-right bg-lightgrey">
+          <!-- Emoticons Button -->
           <div class="emoticons">
             <a href="#"><i class="far fa-smile"></i></a>
           </div>
+          <!-- /Emoticons Button -->
+          <!-- Message Input -->
           <input type="text" id="msg-input" placeholder="Scrivi un messaggio">
+          <!-- /Message Input -->
+          <!-- Send Message Button -->
           <div class="send-btn">
             <a href="#" id="send-btn"><i class="fas fa-paper-plane"></i></a>
           </div>
+          <!-- /Send Message Button -->
         </section>
+        <!-- /Footer Right -->
       </div>
+      <!-- /Main Screen -->
     </div>
+    <!-- /app container -->
   </div>
+  <!-- /container -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/script.js" charset="utf-8"></script>
