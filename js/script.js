@@ -56,6 +56,13 @@ $(document).ready(function() {
     $(".active-conversation-info .contact-name h3").text(contactName);
     $("#contact-avatar").attr("src", contactImg);
 
+    // Seleziono l'ultimo messaggio presente nella finestra di chat attiva
+    var lastMsg = $(".main-view").eq(contactIndex).find(".msg-row").last();
+    // Ricavo l'orario di invio del messaggio
+    var lastMsgTime = lastMsg.find(".msg-time").text();
+    // Scrivo l'orario nell'header
+    $(".conversation-last time").text(lastMsgTime);
+
   });
 
 // Click event on message arrow
@@ -127,6 +134,16 @@ function sendMessage() {
 
     // Aggiungo il messaggio ottenuto alla finestra chat attiva
     $(".main-view.active").append(msgElement);
+
+    // Salvo l'index della finestra attiva, in cui è stato inviato il messaggio
+    var viewIndex = $(".main-view.active").index() - 1;
+    // Seleziono il contatto corrispondente alla finestra di chat attiva
+    var currentView = $(".conversation-item").eq(viewIndex);
+    // Sostituisco l'orario con l'orario dell'ultimo messaggio
+    currentView.find(".conversation-time").text(currentTime);
+    // e sostituisco il messaggio con l'ultimo messaggio ricevuto
+    currentView.find(".conversation-text p").text(inputValue);
+
     // Svuoto il campo input messaggio
     $("#msg-input").val("");
 
@@ -158,7 +175,7 @@ var risposte = [
 
 function getReply() {
   // Seleziono e salvo l'elemento nell'header relativo all'ultimo accesso
-  var statusElement = $(".conversation-last p").text();
+  var statusElement = $(".conversation-last p").html();
   // Appena eseguita la funzione, il testo diventerà "Sta scrivendo..."
   $(".conversation-last p").text("Sta scrivendo...");
   // Salvo l'index della finestra attiva, in cui è stato inviato il messaggio
@@ -187,7 +204,16 @@ function getReply() {
     $(".main-view").eq(viewIndex).append(msgElement);
 
     // Ripristino il testo dello status nell'header
-    $(".conversation-last p").text(statusElement);
+    $(".conversation-last p").html(statusElement);
+    // Cambio l'orario dell'header con quello di invio del messaggio
+    $(".conversation-last time").text(currentTime);
+
+    // Seleziono il contatto corrispondente alla finestra di chat attiva
+    var currentView = $(".conversation-item").eq(viewIndex);
+    // Sostituisco l'orario con l'orario dell'ultimo messaggio
+    currentView.find(".conversation-time").text(currentTime);
+    // e sostituisco il messaggio con l'ultimo messaggio ricevuto
+    currentView.find(".conversation-text p").text(risposta);
 
     // Eseguo la funzione che scrolla in basso la chat
     scrollBottom();
@@ -201,5 +227,5 @@ function scrollBottom() {
   // Seleziono l'elemento finestra chat
   var chat = $('.main-view');
   // Eseguo uno scroll verso il basso di un valore pari all'altezza totale possibile dello scroll
-  chat.scrollTop(chat.prop("scrollHeight"));
+  chat.scrollTop(1000);
 }

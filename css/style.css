@@ -218,6 +218,14 @@ i {
   color: #C8CBCC;
 }
 
+#left-screen .conversation-item .conversation-text p {
+  display:block;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #left-screen .conversation-item .conversation-time {
   margin-left: auto;
   font-size: 12px;
